@@ -1,0 +1,824 @@
+Danh mục
+import 'package:flutter/material.dart';
+
+import '../wigets/textbinhthuong.dart';
+import '../wigets/textnho.dart';
+import '../wigets/textto.dart';
+
+class MyHome1 extends StatefulWidget {
+  const MyHome1({super.key});
+
+  @override
+  State<MyHome1> createState() => _MyHome1State();
+}
+
+class _MyHome1State extends State<MyHome1> {
+  int current_index = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 102, 199, 98),
+          leading: Row(
+            children: [IconButton(onPressed: () {}, icon: Icon(Icons.sort))],
+          ),
+          title: Text("Keells"),
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined)),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.notifications_active_outlined))
+          ],
+        ),
+        body: Container(
+            color: Color.fromARGB(255, 235, 232, 232),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 15, left: 15, right: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TxtTo(ten: "ALL Categories"),
+                        Row(
+                          children: [
+                            TxtNho(
+                              ten: "View All",
+                              color: Color.fromARGB(255, 102, 199, 98),
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.arrow_right_outlined))
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 160,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs1(
+                              link: "assets/image/Household.jpg",
+                              ten: "Household",
+                              left: 7,
+                            )),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs1(
+                              link: "assets/image/Grosery.jpg",
+                              ten: "Grosery",
+                              left: 25,
+                            )),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs1(
+                              link: "assets/image/Liquor.png",
+                              ten: "Liquor",
+                              left: 25,
+                            )),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs1(
+                              link: "assets/image/Cheese.jpg",
+                              ten: "Chilled",
+                              left: 25,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 0, left: 15, right: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TxtTo(ten: "Nexus Member Deals"),
+                        Row(
+                          children: [
+                            TxtNho(
+                              ten: "View All",
+                              color: Color.fromARGB(255, 102, 199, 98),
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.arrow_right_outlined))
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 180,
+                    // color: Colors.amber,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs2(
+                                name: "Ginger",
+                                cost: "Rs.690.00",
+                                link: "assets/image/Ginger.jpg",
+                                weight: "1KG")),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs2(
+                                name: "Garlic Premium",
+                                cost: "Rs.380.00",
+                                link: "assets/image/cutoi.jpg",
+                                weight: "1KG")),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs2(
+                                name: "Red Onions",
+                                cost: "Rs.260.00",
+                                link: "assets/image/red_onions.jpg",
+                                weight: "1KG")),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 0, left: 15, right: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TxtTo(ten: "Keells Deals"),
+                        Row(
+                          children: [
+                            TxtNho(
+                              ten: "View All",
+                              color: Color.fromARGB(255, 102, 199, 98),
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.arrow_right_outlined))
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 180,
+                    // color: Colors.amber,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs2(
+                                name: "Carrot",
+                                cost: "Rs.490.00",
+                                link: "assets/image/Carrot.jpg",
+                                weight: "1KG")),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs2(
+                                name: "Mango-Bud",
+                                cost: "Rs.210.00",
+                                link: "assets/image/Xoai.jpg",
+                                weight: "1KG")),
+                        InkWell(
+                            onTap: () {},
+                            child: Boxs2(
+                                name: "Grapes-Green",
+                                cost: "Rs.1,120.00",
+                                link: "assets/image/nho-xanh.jpg",
+                                weight: "1KG")),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Color.fromARGB(255, 102, 199, 98),
+          currentIndex: current_index,
+          onTap: (int index) {
+            setState(() {
+              current_index = index;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.store_outlined),
+              label: 'Store',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag_outlined),
+              label: 'My Cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite_outline),
+              label: 'Favorites',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_2_outlined),
+              label: 'Profile',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.more_outlined),
+              label: 'More',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Boxs1 extends StatelessWidget {
+  final String link;
+  final String ten;
+  final double left;
+  const Boxs1(
+      {super.key, required this.link, required this.ten, this.left = 0});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 120,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                  height: 110,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                  ),
+                  child: Center(
+                    child: Container(
+                      height: 60,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                          image: DecorationImage(
+                              //fit: BoxFit.cover,
+                              image: AssetImage(link))),
+                    ),
+                  )),
+              Row(
+                //mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: left),
+                    child: TxtBinhThuong(
+                      ten: ten,
+                    ),
+                  ),
+                  SizedBox(width: 0),
+                  IconButton(
+                      onPressed: () {}, icon: Icon(Icons.arrow_right_outlined))
+                ],
+              ),
+            ],
+          ),
+        ));
+  }
+}
+
+class Boxs2 extends StatefulWidget {
+  final String link;
+  final String name;
+  final String cost;
+  final String weight;
+  const Boxs2(
+      {super.key,
+      required this.name,
+      required this.cost,
+      required this.link,
+      required this.weight});
+
+  @override
+  State<Boxs2> createState() => _Boxs2State();
+}
+
+class _Boxs2State extends State<Boxs2> {
+  bool favourite = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 130,
+      //color: Colors.red,
+      padding: EdgeInsets.only(left: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: 130,
+              width: 140,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                image: DecorationImage(
+                  //fit: BoxFit.cover,
+                  image: AssetImage(widget.link),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 5, top: 5, right: 20),
+                    child: Container(
+                      height: 15,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(2)),
+                      child: Center(
+                          child: TxtNho(
+                        ten: widget.weight,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.only(left: 80, top: 90, right: 10),
+                      child: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            favourite = !favourite;
+                          });
+                        },
+                        icon: favourite
+                            ? Icon(
+                                Icons.favorite,
+                                color: Color.fromARGB(255, 102, 199, 98),
+                              )
+                            : Icon(
+                                Icons.favorite_outline,
+                                color: Colors.black,
+                              ),
+                      )),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TxtNho(
+                  ten: widget.name,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TxtNho(
+                  ten: widget.cost,
+                  dam: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+Giỏ hàng
+import 'package:flutter/material.dart';
+
+import '../wigets/textbinhthuong.dart';
+import '../wigets/textto.dart';
+class MyHome2 extends StatefulWidget {
+  const MyHome2({super.key});
+
+  @override
+  State<MyHome2> createState() => _MyHome2State();
+}
+
+class _MyHome2State extends State<MyHome2> {
+  String dropdownValue = '+94';
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color.fromARGB(255, 53, 85, 51),
+            leading: Row(
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back))
+              ],
+            ),
+            title: Text("Checkout"),
+          ),
+          body: Container(
+            color: Color.fromARGB(255, 223, 170, 170),
+            child: SingleChildScrollView(
+                child: Padding(
+              padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+              child: Column(
+                children: [
+                  Container(
+                    color: Color.fromARGB(255, 224, 191, 191),
+                    height: 220,
+                    width: MediaQuery.of(context).size.width,
+                    child: Column(
+                      children: [
+                        Container(
+                            height: 109.05,
+                            width: MediaQuery.of(context).size.width,
+                            color: Color.fromARGB(255, 167, 132, 132),
+                            child: Padding(
+                              padding:
+                                  EdgeInsets.only(left: 10, right: 10, top: 15),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      TxtTo(ten: "Cart Summary"),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 15,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      TxtBinhThuong(
+                                        ten: "Subtotal (4 items)",
+                                        dam: FontWeight.normal,
+                                      ),
+                                      TxtBinhThuong(
+                                        ten: "Rs 7,090.00",
+                                        dam: FontWeight.normal,
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      TxtBinhThuong(
+                                        ten: "Promotion Discounts",
+                                        dam: FontWeight.normal,
+                                      ),
+                                      TxtBinhThuong(
+                                        ten: "Rs 300.00",
+                                        dam: FontWeight.normal,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )),
+                        SizedBox(
+                          height: 0.1,
+                        ),
+                        Container(
+                            height: 100,
+                            width: MediaQuery.of(context).size.width,
+                            color: Color.fromARGB(255, 150, 122, 122),
+                            child: Padding(
+                              padding:
+                                  EdgeInsets.only(left: 10, right: 10, top: 10),
+                              child: Column(children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    TxtBinhThuong(
+                                      ten: "Add Coupon",
+                                      dam: FontWeight.normal,
+                                    ),
+                                    Container(
+                                      height: 30,
+                                      width: 100,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Colors.grey),
+                                              borderRadius:
+                                                  BorderRadius.circular(3)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromARGB(
+                                                      255, 102, 199, 98))),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    TxtBinhThuong(
+                                      ten: "Delivery Charges",
+                                      dam: FontWeight.normal,
+                                    ),
+                                    TxtBinhThuong(
+                                      ten: "Rs 0.00",
+                                      dam: FontWeight.normal,
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const[
+                                    TxtTo(
+                                      ten: "Est. Total",
+                                    ),
+                                    TxtTo(
+                                      ten: "Rs 6,790.00",
+                                    )
+                                  ],
+                                ),
+                              ]),
+                            ))
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Container(
+                      color: Colors.white,
+                      height: 170,
+                      width: MediaQuery.of(context).size.width,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 10, top: 15, right: 10),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                TxtTo(ten: "Recipient Details"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Container(
+                                height: 40,
+                                width: MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.grey, width: 1),
+                                    borderRadius: BorderRadius.circular(3)),
+                                child: Center(
+                                    child:
+                                        TxtBinhThuong(ten: "Ishan Madushka"))),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  height: 40,
+                                  width: 60,
+                                  child: DropdownButtonFormField<String>(
+                                    decoration: InputDecoration(
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.grey),
+                                          borderRadius:
+                                              BorderRadius.circular(3)),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 102, 199, 98))),
+                                      contentPadding: EdgeInsets.zero,
+                                      border: OutlineInputBorder(),
+                                    ),
+                                    value: dropdownValue,
+                                    onChanged: (String? newValue) {
+                                      setState(() {
+                                        dropdownValue = newValue!;
+                                      });
+                                    },
+                                    items: <String>['+84', '+86', '+94']
+                                        .map<DropdownMenuItem<String>>(
+                                            (String value) {
+                                      return DropdownMenuItem<String>(
+                                        value: value,
+                                        child: Text(value),
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    height: 40,
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                        hintText: "71 87 86 729",
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.grey),
+                                          borderRadius:
+                                              BorderRadius.circular(3),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 102, 199, 98)),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      )),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    color: Colors.white,
+                    height: 170,
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              TxtTo(ten: "Delivery Information"),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 0, right: 0, top: 15),
+                                  child: Container(
+                                    height: 40,
+                                    width:
+                                        MediaQuery.of(context).size.width / 2 -
+                                            30,
+                                    child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ButtonStyle(
+                                        side: MaterialStateProperty.all<
+                                            BorderSide>(
+                                          BorderSide(
+                                            color: Color.fromARGB(
+                                                255, 102, 199, 98),
+                                            width: 1,
+                                          ),
+                                        ),
+                                        backgroundColor:
+                                            MaterialStateProperty.all<Color>(
+                                                Color.fromARGB(
+                                                    255, 203, 236, 181)),
+                                        shape: MaterialStateProperty.all<
+                                                RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(3),
+                                        )),
+                                      ),
+                                      child: Text(
+                                        'Home Delivery',
+                                        style: TextStyle(
+                                            color: Color.fromARGB(
+                                                255, 102, 199, 98)),
+                                      ),
+                                    ),
+                                  )),
+                              Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 10, right: 0, top: 15),
+                                  child: Container(
+                                    height: 40,
+                                    width:
+                                        MediaQuery.of(context).size.width / 2 -
+                                            30,
+                                    child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all<Color>(
+                                                Colors.white),
+                                        side: MaterialStateProperty.all<
+                                            BorderSide>(
+                                          BorderSide(
+                                            color: Colors.black,
+                                            width: 1,
+                                          ),
+                                        ),
+                                        shape: MaterialStateProperty.all<
+                                                RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        )),
+                                      ),
+                                      child: Text(
+                                        'Pick Up',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                  )),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(left: 0, right: 0, top: 15),
+                                child: Container(
+                                    height: 40,
+                                    width:
+                                        MediaQuery.of(context).size.width - 100,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Colors.grey, width: 1),
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(3),
+                                            bottomLeft: Radius.circular(3))),
+                                    child: Center(
+                                        child: TxtBinhThuong(
+                                            ten:
+                                                "424/1D Palanwatta, Pannipitiya"))),
+                              ),
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(left: 0, right: 0, top: 15),
+                                child: Container(
+                                    height: 40,
+                                    width:
+                                        MediaQuery.of(context).size.width - 275,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: Colors.grey, width: 1),
+                                        borderRadius: BorderRadius.only(
+                                            topRight: Radius.circular(3),
+                                            bottomRight: Radius.circular(3))),
+                                    child: Center(
+                                        child:
+                                            Icon(Icons.location_on_outlined))),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    color: Colors.white,
+                    height: 170,
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                TxtTo(ten: "Delivery Date"),
+                              ],
+                            ),
+                          ],
+                        )),
+                  )
+                ],
+              ),
+            )),
+          )),
+    );
+  }
+}
